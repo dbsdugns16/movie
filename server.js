@@ -109,7 +109,7 @@ db.once('open', function() {
         age: 'Number'
     });
     
-    var Test = mongoose.model('test', test, "test");
+    var Test = mongoose.model('test', test);    
 
     // var newTest = new Test({name:'홍길동', age:'25'});
     
