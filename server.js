@@ -93,7 +93,7 @@
 
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://movie:1234@cluster0.a3x5545.mongodb.net');
+mongoose.connect('mongodb+srv://movie:1234@cluster0.a3x5545.mongodb.net/movie');
 
 var db = mongoose.connection;
 
