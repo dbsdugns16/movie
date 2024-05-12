@@ -103,20 +103,30 @@ db.on('error', function(){
 
 db.once('open', function() {
     console.log('Connected!');
-});
 
-var test = mongoose.Schema({
-    name: 'string',
-    age: 'number'
-});
-
-var Test = mongoose.model('test', test);
-
-Test.find()
-    .then(tests => {
-        console.log('--- Read all ---');
-        console.log(tests);
-    })
-    .catch(error => {
-        console.log(error);
+    var test = mongoose.Schema({
+        name: 'String',
+        age: 'Number'
     });
+    
+    var Test = mongoose.model('test', test, "test");
+
+    // var newTest = new Test({name:'홍길동', age:'25'});
+    
+    // newTest.save()
+    // .then(data => {
+    //     console.log('Saved!');
+    // })
+    // .catch(error => {
+    //     console.log(error);
+    // });
+    
+    Test.find()
+        .then(tests => {
+            console.log('--- Read all ---');
+            console.log(tests);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+});
